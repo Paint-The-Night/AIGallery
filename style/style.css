@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding: 20px;
+}
+
+.image {
+    max-width: 50%; /* Limiting the image to half of the container's width */
+    height: auto;
+    border: 2px solid #ddd;
+}
+
+.info {
+    flex: 1; /* Allows the info box to fill the remaining space */
+    padding: 0 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; 
+    }
+
+    .image, .info {
+        max-width: 100%; /* Full width for small screens */
+        flex-basis: auto; /* Resets the default size of flex items */
+    }
+
+    .info {
+        padding: 20px 0; /* Adds padding on the top and bottom for small screens */
+    }
+}

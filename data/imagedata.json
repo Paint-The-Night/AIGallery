@@ -1,0 +1,16 @@
+[
+    {
+        "id": "angelprojection",
+        "name": "Angel Projection",
+        "model": "DALL·E 3",
+        "dateCreated": "2023-11-29",
+        "description": "A beautiful depiction of a wave."
+    },
+    {
+        "id": "image2",
+        "name": "Starry Night",
+        "model": "ABC-789",
+        "dateCreated": "2023-02-15",
+        "description": "A famous starry sky painting."
+    }
+]
