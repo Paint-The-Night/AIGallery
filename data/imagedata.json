@@ -4,13 +4,15 @@
         "name": "Angel Projection",
         "model": "DALL·E 3",
         "dateCreated": "2023-11-29",
-        "description": "A beautiful depiction of a wave."
+        "description": "A beautiful depiction of a wave.",
+        "thumbnail": "https://aigallery.s3.ap-southeast-2.amazonaws.com/angelprojection.jpg"
     },
     {
         "id": "image2",
         "name": "Starry Night",
         "model": "ABC-789",
         "dateCreated": "2023-02-15",
-        "description": "A famous starry sky painting."
+        "description": "A famous starry sky painting.",
+        "thumbnail": "https://aigallery.s3.ap-southeast-2.amazonaws.com/angelprojection.jpg"
     }
 ]

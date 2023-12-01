@@ -39,3 +39,23 @@ body {
         padding: 20px 0; /* Adds padding on the top and bottom for small screens */
     }
 }
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery-thumbnail {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px;
+}

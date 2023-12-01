@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Function to load individual image data
     function loadImageData(imageId) {
         fetch('../data/imagedata.json')
             .then(response => response.json())
@@ -16,11 +17,39 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error:', error));
     }
 
-    // Read the image ID from the data-image-id attribute in the HTML document
+    // Function to generate gallery grid
+    function generateGallery() {
+        fetch('../data/imagedata.json')
+            .then(response => response.json())
+            .then(images => {
+                const galleryContainer = document.getElementById('gallery-container');
+    
+                images.forEach(image => {
+                    const div = document.createElement('div');
+                    div.className = 'gallery-item';
+                    div.innerHTML = `
+                        <img src="${image.thumbnail}" alt="${image.name}" class="gallery-thumbnail">
+                        <h2>${image.name}</h2>
+                        <p>Model: ${image.model}</p>
+                        <p>Date Created: ${image.dateCreated}</p>
+                        <p>${image.description}</p>
+                    `;
+                    galleryContainer.appendChild(div);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    }
+    
+
+    // Check for the gallery container and load gallery if it exists
+    if (document.getElementById('gallery-container')) {
+        generateGallery();
+    }
+
+    // Check for an image ID and load individual image data if it exists
     const imageId = document.body.getAttribute('data-image-id');
     if (imageId) {
         loadImageData(imageId);
-    } else {
-        console.error('Image ID not specified in the HTML document.');
     }
 });
+
